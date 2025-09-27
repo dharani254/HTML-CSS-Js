@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Internal & External JavaScript Demo</title>
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      console.log('Head internal script: DOM fully loaded');
+      const h = document.getElementById('title');
+      if (h) h.textContent += ' (modified by head internal script)';
+    });
+  </script>
+
+
+  <script src="script.js"></script>
+</head>
+<body>
+  <h1 id="title">Internal & External JS Demo</h1>
+
+  <p id="status">Status: waiting...</p>
+
+  <button onclick="inlineClick()">Click (inline handler)</button>
+
+  <script>
+    const status = document.getElementById('status');
+    if (status) status.textContent = 'Status: updated by body internal script';
+    const btn = document.querySelector('button');
+    if (btn) {
+      btn.addEventListener('click', function () {
+        alert('Button clicked (from addEventListener)');
+      });
+    }
+    function inlineClick() {
+      alert('Button clicked (from inlineClick function)');
+    }
+  </script>
+  <script src="script.js" defer></script>
+</body>
+</html>

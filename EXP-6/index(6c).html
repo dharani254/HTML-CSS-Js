@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>JavaScript Input Methods</title>
+  <style>
+    body { font-family: Arial, sans-serif; padding: 20px; }
+    button { margin: 5px; padding: 10px 15px; }
+    #output { margin-top: 20px; border: 1px solid #333; padding: 15px; }
+  </style>
+</head>
+<body>
+  <h1>JavaScript Input Demonstration</h1>
+
+  <button onclick="takePrompt()">1. Using prompt()</button><br>
+
+  <label>2. Using HTML Input Field:
+    <input type="text" id="textInput" placeholder="Type something">
+    <button onclick="takeText()">Submit</button>
+  </label><br><br>
+
+  <label>3. Using HTML Form:
+    <form onsubmit="takeForm(event)">
+      Name: <input type="text" id="formName" required>
+      <button type="submit">Submit Form</button>
+    </form>
+  </label><br>
+
+  <button onclick="takeConfirm()">4. Using confirm()</button>
+
+  <div id="output">
+    <p><b>Output will appear here...</b></p>
+  </div>
+
+  <script>
+    // 1. Using prompt()
+    function takePrompt() {
+      let name = prompt("Enter your name:");
+      document.getElementById("output").innerHTML =
+        "You entered (via prompt): <b>" + name + "</b>";
+    }
+
+    // 2. Using input field and button
+    function takeText() {
+      let value = document.getElementById("textInput").value;
+      document.getElementById("output").innerHTML =
+        "You entered (via input field): <b>" + value + "</b>";
+    }
+
+    // 3. Using form submission
+    function takeForm(event) {
+      event.preventDefault(); // prevent page reload
+      let name = document.getElementById("formName").value;
+      document.getElementById("output").innerHTML =
+        "You entered (via form): <b>" + name + "</b>";
+    }
+
+    // 4. Using confirm()
+    function takeConfirm() {
+      let result = confirm("Do you like JavaScript?");
+      document.getElementById("output").innerHTML =
+        "Confirm result: <b>" + (result ? "Yes" : "No") + "</b>";
+    }
+  </script>
+</body>
+</html>

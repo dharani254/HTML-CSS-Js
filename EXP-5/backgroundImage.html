@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Background Image Example</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      min-height: 200vh; /* just to add scroll effect */
+    }
+
+    /* Add the background image halfway down */
+    body::before {
+      content: "";
+      position: fixed;
+      top: 50%;   /* halfway down the screen */
+      left: 50%;  /* center horizontally */
+      transform: translate(-50%, -50%) scaleX(-1); /* center + flip horizontally */
+      background: url("https://upload.wikimedia.org/wikipedia/commons/3/3f/Fronalpstock_big.jpg") no-repeat center;
+      background-size: cover;
+      width: 500px;   /* size of the image */
+      height: 300px;
+      z-index: -1;    /* keep it behind text */
+    }
+
+    h1, p {
+      padding: 20px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Background Image Fixed Example</h1>
+  <p>
+    Scroll down to see how the background image stays fixed in place, 
+    positioned halfway down the screen and flipped horizontally.
+  </p>
+  <p>
+    The image won’t move even when you scroll up or down.
+  </p>
+</body>
+</html>

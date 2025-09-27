@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>JavaScript Output Methods</title>
+  <style>
+    body { font-family: Arial, sans-serif; padding: 20px; }
+    button { margin: 5px; padding: 10px 15px; }
+    #outputArea { margin-top: 20px; border: 1px solid #333; padding: 15px; }
+  </style>
+</head>
+<body>
+  <h1>JavaScript Output Demonstration</h1>
+
+  <button onclick="showAlert()">1. Alert Box</button>
+  <button onclick="showConsole()">2. Console Log</button>
+  <button onclick="showDocumentWrite()">3. document.write()</button>
+  <button onclick="showInnerHTML()">4. innerHTML</button>
+  <button onclick="printPage()">5. Print Page</button>
+
+  <div id="outputArea">
+    <p id="result">Output area for innerHTML.</p>
+  </div>
+
+  <script>
+    // 1. Using alert()
+    function showAlert() {
+      alert("This is an alert box!");
+    }
+
+    // 2. Using console.log()
+    function showConsole() {
+      console.log("This message is shown in the browser console.");
+      alert("Check the browser console (F12 → Console tab).");
+    }
+
+    // 3. Using document.write()
+    function showDocumentWrite() {
+      document.write("<h2>This text is written using document.write()</h2>");
+      document.write("<p>Note: This replaces the entire page content.</p>");
+    }
+
+    // 4. Using innerHTML
+    function showInnerHTML() {
+      document.getElementById("result").innerHTML =
+        "This text was updated using <b>innerHTML</b>.";
+    }
+
+    // 5. Using window.print()
+    function printPage() {
+      window.print();
+    }
+  </script>
+</body>
+</html>
