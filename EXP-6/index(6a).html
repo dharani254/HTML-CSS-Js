@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>JavaScript Example</title>
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: #f2f2f2;
+      text-align: center;
+      padding: 50px;
+    }
+    h1 {
+      color: #222;
+      text-decoration:none;
+    }
+    p {
+      font-size: 18px;
+      color: #333;
+    }
+    button {
+      background-color: #2196f3;
+      color: white;
+      border: none;
+      padding: 12px 20px;
+      margin: 10px;
+      font-size: 16px;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+    button:hover {
+      background-color: #0b7dda;
+    }
+  </style>
+  <script>
+    function showInternalMessage() {
+      alert("Hello! This is an Internal JavaScript Alert.");
+    }
+  </script>
+</head>
+<body>
+  <h1>JavaScript Internal & External Example</h1>
+  <p>Click the buttons below to see both internal and external JavaScript in action.</p>
+  <button onclick="showInternalMessage()">Click for Internal Script</button>
+  <button onclick="showExternalMessage()">Click for External Script</button>
+  <script src="script.js"></script>
+</body>
+</html>
