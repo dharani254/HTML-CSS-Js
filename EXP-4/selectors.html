@@ -4,23 +4,18 @@
   <meta charset="UTF-8">
   <title>CSS Selectors Example</title>
   <style>
-    h1 { color: darkblue; }               /* Element */
-    #unique { color: green; font-size: 22px; } /* ID */
-    .highlight { background: yellow; }    /* Class */
-    h2, h3, p { font-family: Arial; }     /* Group */
-    * { margin: 6px; }                    /* Universal */
-
-    
+    h1 { color: darkblue; }               
+    #unique { color: green; font-size: 22px; } 
+    .highlight { background: yellow; }    
+    h2, h3, p { font-family: Arial; }     
+    * { margin: 6px; }                   
     div p { color: brown; }               
     div > span { color: purple; }         
     h2 + p { color: orange; }             
     h2 ~ ul { background: #f0f0f0; }      
-
-
-    a:hover { color: red; }               /* Hover */
-    li:first-child { font-style: italic; }/* First child */
-    li:last-child { font-weight: bold; }  /* Last child */
-
+    a:hover { color: red; }               
+    li:first-child { font-style: italic; }
+    li:last-child { font-weight: bold; } 
     p::first-letter {
       font-size: 24px;
       color: blue;
@@ -29,7 +24,6 @@
       content: " ";
       color: green;
     }
-
     input[type="text"] { border: 2px solid blue; }
     input[placeholder] { background-color: #f9f9f9; }
     h1{
@@ -38,7 +32,6 @@
   </style>
 </head>
 <body>
-
   <h1>CSS Selectors Demonstration</h1>
   <h1>Simple Selectors</h1>
   <h1>Element Selector Example</h1>
@@ -46,8 +39,6 @@
   <h3 class="highlight">This is styled with Class selector</h3>
   <p>Group selector applies font-family to h2, h3, p.</p>
   <p>Universal selector gives margin to all elements.</p>
-
-  <!-- COMBINATOR SELECTORS -->
   <h1>Combinator Selectors</h1>
   <div>
     <p>Descendant Selector: This paragraph is inside a div.</p>
@@ -60,8 +51,6 @@
     <li>Second list item</li>
     <li>Last list item</li>
   </ul>
-
-  <!-- PSEUDO-CLASS SELECTORS -->
   <h1>Pseudo-Class Selectors</h1>
   <p><a href="#">Hover over this link</a> to see hover effect.</p>
   <ul>
@@ -69,17 +58,12 @@
     <li>Middle item</li>
     <li>Last child item</li>
   </ul>
-
-  <!-- PSEUDO-ELEMENT SELECTORS -->
   <h1>Pseudo-Element Selectors</h1>
   <p>This paragraph uses first-letter and after pseudo-elements.</p>
-
-  <!-- ATTRIBUTE SELECTORS -->
   <h1>Attribute Selectors</h1>
   <form>
     <input type="text" placeholder="Enter your name">
     <input type="password" placeholder="Enter your password">
   </form>
-
 </body>
 </html>

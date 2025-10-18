@@ -2,41 +2,42 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Background Image Example</title>
+  <title>Welcome Page</title>
   <style>
     body {
       margin: 0;
-      font-family: Arial, sans-serif;
-      min-height: 200vh; /* just to add scroll effect */
-    }
-
-    /* Add the background image halfway down */
-    body::before {
-      content: "";
-      position: fixed;
-      top: 50%;   /* halfway down the screen */
-      left: 50%;  /* center horizontally */
-      transform: translate(-50%, -50%) scaleX(-1); /* center + flip horizontally */
-      background: url("https://upload.wikimedia.org/wikipedia/commons/3/3f/Fronalpstock_big.jpg") no-repeat center;
+      font-family: 'Poppins', sans-serif;
+      color: white;
+      background: url("https://upload.wikimedia.org/wikipedia/commons/3/3f/Fronalpstock_big.jpg") no-repeat center center fixed;
       background-size: cover;
-      width: 500px;   /* size of the image */
-      height: 300px;
-      z-index: -1;    /* keep it behind text */
+      height: 200vh; 
+      text-align: center;
     }
-
-    h1, p {
-      padding: 20px;
+    .content {
+      height: 100vh; 
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-shadow: 2px 2px 6px rgba(0,0,0,0.6);
+    }
+    h1 {
+      font-size: 48px;
+      margin-bottom: 10px;
+    }
+    p {
+      font-size: 20px;
+      max-width: 700px;
     }
   </style>
 </head>
 <body>
-  <h1>Background Image Fixed Example</h1>
-  <p>
-    Scroll down to see how the background image stays fixed in place, 
-    positioned halfway down the screen and flipped horizontally.
-  </p>
-  <p>
-    The image won’t move even when you scroll up or down.
-  </p>
+  <div class="content">
+    <h1>Welcome to My Website</h1>
+    <p>Explore amazing content and enjoy the view! Scroll down to see more of the background image.</p>
+  </div>
 </body>
 </html>
+
+
+

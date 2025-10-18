@@ -2,28 +2,66 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>CSS Box Model Example</title>
+  <title>Working of CSS Box Model</title>
   <style>
-    .box {
-      width: 250px;               /* Content width */
-      height: 100px;              /* Content height */
-      background-color: lightblue; /* Content area */
-      padding: 20px;              /* Space between content & border */
-      border: 5px solid darkblue; /* Border around the padding */
-      margin: 30px;               /* Space outside the border */
-    }
-
     body {
-      font-family: Arial, sans-serif;
-      background-color: #f9f9f9;
+      font-family: 'Poppins', sans-serif;
+      background-color: #f2f2f2;
+      text-align: center;
+      padding: 30px;
+    }
+    h1 {
+      color: #333;
+      text-decoration: underline;
+    }
+    .container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 50px;
+      margin-top: 40px;
+    }
+    .box {
+      background-color: lightblue;
+      width: 250px;
+      padding: 25px;
+      border: 6px solid darkblue;
+      text-align: center;
+      font-size: 18px;
+    }
+    img {
+      width: 250px;
+      height: 200px;
+      border: 5px solid #2196f3;
+      padding: 20px;
+      background-color: #fff;
+    }
+    .labels {
+      text-align: left;
+      margin: 20px auto;
+      width: 350px;
+      background-color: #fff;
+      border-left: 5px solid #2196f3;
+      padding: 10px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+    .labels p {
+      margin: 6px 0;
+      font-size: 16px;
     }
   </style>
 </head>
 <body>
-  <h1>CSS Box Model Demonstration</h1>
-  <div class="box">
-    <p>This is the <b>content</b> inside the box.</p>
-    <p>Padding adds space around content, border surrounds padding, and margin creates space outside.</p>
+  <h1>Working of CSS Box Model</h1>
+  <div class="container">
+    <div class="box">This is <b>Content</b> inside the box.</div>
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSimtZyskdR3y0AtCiHyEebU1o7mZQFOA6F0Q&s" alt="Example Image">
+  </div>
+  <div class="labels">
+    <p><b>Content:</b> The actual text or image inside the box.</p>
+    <p><b>Padding:</b> Space between content and border (inside the box).</p>
+    <p><b>Border:</b> The outline surrounding padding and content.</p>
+    <p><b>Margin:</b> Space outside the border that separates boxes.</p>
   </div>
 </body>
 </html>

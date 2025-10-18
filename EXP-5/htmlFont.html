@@ -2,58 +2,56 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>CSS Font and Text Example</title>
+  <title>Working of CSS Font and Text Properties</title>
   <style>
-    /* font-size example */
-    .small-text {
-      font-size: 12px;
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: #fafafa;
+      margin: 40px;
     }
-    .medium-text {
+    h1 {
+      text-align: center;
+      color: #000;
+      text-decoration: underline;
+    }
+    p {
       font-size: 20px;
+      margin: 20px 0;
     }
-    .large-text {
-      font-size: 32px;
+    .fontsize {
+      font-size: 28px;
+      color: darkblue;
     }
-
-    /* font-weight example */
-    .light {
-      font-weight: 300;
+    .fontweight {
+      font-weight: bold;
+      color: green;
     }
-    .normal {
-      font-weight: 400;
-    }
-    .bold {
-      font-weight: 700;
-    }
-
-    /* font-style example */
-    .italic {
+    .fontstyle {
       font-style: italic;
+      color: brown;
     }
-    .oblique {
-      font-style: oblique;
+    .textdecoration {
+      text-decoration: underline;
+      color: purple;
     }
-    .normal-style {
-      font-style: normal;
+    .texttransform {
+      text-transform: uppercase;
+      color: maroon;
+      font-weight: bold;
+    }
+    .textalign {
+      text-align: right;
+      color: teal;
     }
   </style>
 </head>
 <body>
-  <h1>CSS Font and Text Properties</h1>
-
-  <h2>Font Size</h2>
-  <p class="small-text">This is small text (12px).</p>
-  <p class="medium-text">This is medium text (20px).</p>
-  <p class="large-text">This is large text (32px).</p>
-
-  <h2>Font Weight</h2>
-  <p class="light">This is light font-weight (300).</p>
-  <p class="normal">This is normal font-weight (400).</p>
-  <p class="bold">This is bold font-weight (700).</p>
-
-  <h2>Font Style</h2>
-  <p class="normal-style">This is normal text (font-style: normal).</p>
-  <p class="italic">This is italic text (font-style: italic).</p>
-  <p class="oblique">This is oblique text (font-style: oblique).</p>
+  <h1>Working of CSS Font and Text Properties</h1>
+  <p class="fontsize">This text shows <b>font-size</b> property.</p>
+  <p class="fontweight">This text shows <b>font-weight</b> property.</p>
+  <p class="fontstyle">This text shows <b>font-style</b> property.</p>
+  <p class="textdecoration">This text shows <b>text-decoration</b> property.</p>
+  <p class="texttransform">This text shows <b>text-transform</b> property.</p>
+  <p class="textalign">This text shows <b>text-align</b> property.</p>
 </body>
 </html>

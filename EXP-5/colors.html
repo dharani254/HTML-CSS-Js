@@ -4,60 +4,64 @@
   <meta charset="UTF-8">
   <title>CSS Color References</title>
   <style>
-    /* Named color */
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f2f2f2;
+      text-align: center;
+      margin: 0;
+      padding: 20px;
+    }
+
+    h1 {
+      color: #333;
+    }
+
+    .color-box {
+      width: 80%;
+      margin: 8px auto;
+      padding: 6px; 
+      border-radius: 4px; 
+      font-size: 18px;
+      font-weight: bold;
+      color: white;
+    }
+
     .named {
-      color: red;
+      background-color: red;
     }
 
-    /* Hexadecimal color */
     .hex {
-      color: #1E90FF; /* DodgerBlue */
+      background-color: #1e90ff;
     }
 
-    /* RGB color */
     .rgb {
-      color: rgb(34, 139, 34); /* ForestGreen */
+      background-color: rgb(34,139,34);
     }
 
-    /* RGBA color with transparency */
     .rgba {
-      color: rgba(255, 0, 0, 0.5); /* Semi-transparent red */
+      background-color: rgba(255,165,0,0.7);
+      color: black;
     }
 
-    /* HSL color */
     .hsl {
-      color: hsl(240, 100%, 50%); /* Blue */
+      background-color: hsl(300,76%,72%);
+      color: black;
     }
 
-    /* HSLA color with transparency */
     .hsla {
-      color: hsla(300, 100%, 25%, 0.6); /* Semi-transparent purple */
-    }
-
-    /* Background examples */
-    .bg-hex {
-      background-color: #FFD700; /* Gold */
-      padding: 10px;
-    }
-    .bg-rgb {
-      background-color: rgb(173, 216, 230); /* LightBlue */
-      padding: 10px;
+      background-color: hsla(200,100%,50%,0.5);
+      color: black;
     }
   </style>
 </head>
 <body>
+  <h1>CSS Color Reference Demo</h1>
 
-  <h1>CSS Color Reference Demonstration</h1>
-
-  <p class="named">This text uses a named color: red</p>
-  <p class="hex">This text uses a hex color: #1E90FF (DodgerBlue)</p>
-  <p class="rgb">This text uses an RGB color: rgb(34, 139, 34) (ForestGreen)</p>
-  <p class="rgba">This text uses an RGBA color: rgba(255, 0, 0, 0.5) (Semi-transparent red)</p>
-  <p class="hsl">This text uses an HSL color: hsl(240, 100%, 50%) (Blue)</p>
-  <p class="hsla">This text uses an HSLA color: hsla(300, 100%, 25%, 0.6) (Semi-transparent purple)</p>
-
-  <div class="bg-hex">This div uses hex for background color (Gold)</div>
-  <div class="bg-rgb">This div uses rgb for background color (LightBlue)</div>
-
+  <div class="color-box named">This uses a <b>Named Color</b> → red</div>
+  <div class="color-box hex">This uses a <b>Hexadecimal Color</b> → #1e90ff</div>
+  <div class="color-box rgb">This uses an <b>RGB Color</b> → rgb(34,139,34)</div>
+  <div class="color-box rgba">This uses an <b>RGBA Color</b> → rgba(255,165,0,0.7)</div>
+  <div class="color-box hsl">This uses an <b>HSL Color</b> → hsl(300,76%,72%)</div>
+  <div class="color-box hsla">This uses an <b>HSLA Color</b> → hsla(200,100%,50%,0.5)</div>
 </body>
 </html>

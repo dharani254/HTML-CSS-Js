@@ -1,5 +1,4 @@
-/* External Stylesheet */
 h1 {
-  color: darkblue;          /* selector: h1 | property: color | value: darkblue */
+  color: darkblue;         
   text-align: center;
 }

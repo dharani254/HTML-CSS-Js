@@ -24,7 +24,6 @@
 </head>
 <body>
   <h1>Voter Information</h1>
-
   <table>
     <tr>
       <th>Name</th>
@@ -37,24 +36,16 @@
       <td id="eligibilityCell"></td>
     </tr>
   </table>
-
   <script>
-    // Ask for name and age using prompt
     let name = prompt("Enter your name:");
     let age = prompt("Enter your age:");
-
-    // Convert age to number
     age = parseInt(age);
-
-    // Check eligibility
     let eligibility;
     if (age >= 18) {
       eligibility = "<span class='eligible'>Can Vote </span>";
     } else {
       eligibility = "<span class='not-eligible'>Cannot Vote </span>";
     }
-
-    // Display in table
     document.getElementById("nameCell").innerHTML = name;
     document.getElementById("ageCell").innerHTML = age;
     document.getElementById("eligibilityCell").innerHTML = eligibility;
